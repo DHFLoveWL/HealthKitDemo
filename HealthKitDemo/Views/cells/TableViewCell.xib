@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="HealthKitDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyS-VA-SKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.walk" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cZi-iO-G6h">
+                                <rect key="frame" x="16" y="36.333333333333329" width="73.666666666666671" height="74.333333333333343"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cZi-iO-G6h" secondAttribute="height" id="wM2-89-VnB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLo-dI-AGD">
+                                <rect key="frame" x="109.66666666666667" y="62" width="51.333333333333329" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" name="MainPointColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cZi-iO-G6h" firstAttribute="height" secondItem="TyS-VA-SKT" secondAttribute="height" multiplier="0.5" id="5SU-IV-Xl9"/>
+                            <constraint firstItem="cZi-iO-G6h" firstAttribute="centerY" secondItem="TyS-VA-SKT" secondAttribute="centerY" id="lm3-PE-cKf"/>
+                            <constraint firstItem="cZi-iO-G6h" firstAttribute="leading" secondItem="TyS-VA-SKT" secondAttribute="leading" constant="16" id="uNS-VE-chf"/>
+                            <constraint firstItem="KLo-dI-AGD" firstAttribute="leading" secondItem="cZi-iO-G6h" secondAttribute="trailing" constant="20" id="xMq-l0-e8u"/>
+                            <constraint firstItem="KLo-dI-AGD" firstAttribute="centerY" secondItem="TyS-VA-SKT" secondAttribute="centerY" id="xym-RJ-Okq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TyS-VA-SKT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="64C-Xs-fTV"/>
+                    <constraint firstItem="TyS-VA-SKT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SMV-qo-toH"/>
+                    <constraint firstAttribute="bottom" secondItem="TyS-VA-SKT" secondAttribute="bottom" id="dtO-Ud-FpI"/>
+                    <constraint firstAttribute="trailing" secondItem="TyS-VA-SKT" secondAttribute="trailing" id="wai-AI-eux"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="TyS-VA-SKT" id="bs3-CQ-fgB"/>
+                <outlet property="icon" destination="cZi-iO-G6h" id="CEM-WE-w6E"/>
+                <outlet property="nameLabel" destination="KLo-dI-AGD" id="bFY-tK-eyP"/>
+            </connections>
+            <point key="canvasLocation" x="244.61538461538461" y="49.407582938388622"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <namedColor name="MainPointColor">
+            <color red="0.29800000786781311" green="0.25099998712539673" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
